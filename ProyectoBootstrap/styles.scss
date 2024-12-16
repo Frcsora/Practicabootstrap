@@ -1,0 +1,38 @@
+$morado_principal: #aaaaff;
+$gris_principal: #DADADA;
+body{
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  
+  .click{
+    cursor:pointer;
+  }
+  .container{
+    margin:0;
+  }
+  .row{
+    text-align: center;
+    &:nth-child(2n+3){
+      background-color: $gris_principal;
+    }
+    &:nth-child(2n+2){
+      background-color:$morado_principal;
+    }
+    p{
+      text-align: justify;
+    }
+  }
+  .header{
+    position: sticky;
+    top:0;
+    padding: 3px;
+    background-color:$morado_principal
+  }
+  .jumbotron{
+    background-image: url(img/hello_world.jpeg);
+    background-size: cover;
+    background-position: 100%;
+    height: 20vh;
+  }
+}

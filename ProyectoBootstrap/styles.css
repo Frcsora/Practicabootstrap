@@ -1,0 +1,35 @@
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+body .click {
+  cursor: pointer;
+}
+body .container {
+  margin: 0;
+}
+body .row {
+  text-align: center;
+}
+body .row:nth-child(2n+3) {
+  background-color: #DADADA;
+}
+body .row:nth-child(2n+2) {
+  background-color: #aaaaff;
+}
+body .row p {
+  text-align: justify;
+}
+body .header {
+  position: sticky;
+  top: 0;
+  padding: 3px;
+  background-color: #aaaaff;
+}
+body .jumbotron {
+  background-image: url(img/hello_world.jpeg);
+  background-size: cover;
+  background-position: 100%;
+  height: 20vh;
+}/*# sourceMappingURL=styles.css.map */
