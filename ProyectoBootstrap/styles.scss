@@ -1,16 +1,14 @@
 $morado_principal: #aaaaff;
 $gris_principal: #DADADA;
-body{
+$pad:3px;
+.container{
   width: 100vw;
   overflow-x: hidden;
   min-height: 100vh;
-  
   .click{
     cursor:pointer;
   }
-  .container{
-    margin:0;
-  }
+
   .row{
     text-align: center;
     &:nth-child(2n+3){
@@ -22,17 +20,46 @@ body{
     p{
       text-align: justify;
     }
+    
   }
   .header{
+    min-height: 5vh;
     position: sticky;
     top:0;
-    padding: 3px;
-    background-color:$morado_principal
+    background-color:$morado_principal;
+    svg{
+      min-height: 10vw;
+    }
+    .botonMenu{
+      box-shadow: inset 0 0 0 3px grey;
+    }
+  }
+  .foto{
+    max-width: 50%;
   }
   .jumbotron{
-    background-image: url(img/hello_world.jpeg);
+    width: 100%;
+    background-image: url(img/jumbotron2.jpg);
     background-size: cover;
-    background-position: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 20vh;
+    animation: cambiarColor 10s infinite;
+    border-radius: 35%;
+  }
+}
+
+@keyframes cambiarColor {
+  0%{
+    box-shadow: inset 0 0 10px 10px rgb(255,0,0);
+  }
+  33%{
+    box-shadow: inset 0 0 10px 10px rgb(0,255,0)
+  }
+  66%{
+    box-shadow: inset 0 0 10px 10px rgb(0,0,255);
+  }
+  100%{
+    box-shadow: inset 0 0 10px 10px rgb(255,0,0)
   }
 }

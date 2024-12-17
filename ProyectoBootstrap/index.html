@@ -7,59 +7,81 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-    <div class="container-xxl">
-        <header class="header row">
-            <div class="d-flex justify-content-center align-items-center col-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house click" viewBox="0 0 16 16">
-                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
-                </svg>
+<body class="container container-sm container-md container-lg ">
+    <header class=" header row">
+        <div class="d-flex justify-content-center align-items-center col-2 col-lg-1">
+            <a href="#"><svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house click w-100" viewBox="0 0 16 16">
+                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+            </svg></a>
+        </div>
+        <nav class="d-flex justify-content-around align-items-center row col-10 col-lg-11">
+            <div class="d-none d-lg-flex justify-content-center align-items-center nav col-lg-2"><a href="#aboutme" class="click">About me</a></div>
+            <div class="d-none d-lg-flex justify-content-center align-items-center nav col-lg-2"><a href="#studies" class="click">Education</a></div>
+            <div class="d-none d-lg-flex justify-content-center align-items-center nav col-lg-2"><a class="click">Work life</a></div>
+            <div class="d-none d-lg-flex justify-content-center align-items-center nav col-lg-2"><a class="click">My projects</a></div>
+            <div class="d-none d-lg-flex justify-content-center align-items-center nav col-lg-2"><a class="click">Contact me</a></div>
+            <div class="row d-flex justify-content-center align-items-center nav col-10 col-lg-2">
+                <svg class="col-3 col-lg-4 click" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#41479B;" d="M473.655,88.276H38.345C17.167,88.276,0,105.443,0,126.621V385.38 c0,21.177,17.167,38.345,38.345,38.345h435.31c21.177,0,38.345-17.167,38.345-38.345V126.621 C512,105.443,494.833,88.276,473.655,88.276z"></path> <path style="fill:#F5F5F5;" d="M511.469,120.282c-3.022-18.159-18.797-32.007-37.814-32.007h-9.977l-163.54,107.147V88.276h-88.276 v107.147L48.322,88.276h-9.977c-19.017,0-34.792,13.847-37.814,32.007l139.778,91.58H0v88.276h140.309L0.531,391.717 c3.022,18.159,18.797,32.007,37.814,32.007h9.977l163.54-107.147v107.147h88.276V316.577l163.54,107.147h9.977 c19.017,0,34.792-13.847,37.814-32.007l-139.778-91.58H512v-88.276H371.691L511.469,120.282z"></path> <g> <polygon style="fill:#FF4B55;" points="282.483,88.276 229.517,88.276 229.517,229.517 0,229.517 0,282.483 229.517,282.483 229.517,423.724 282.483,423.724 282.483,282.483 512,282.483 512,229.517 282.483,229.517 "></polygon> <path style="fill:#FF4B55;" d="M24.793,421.252l186.583-121.114h-32.428L9.224,410.31 C13.377,415.157,18.714,418.955,24.793,421.252z"></path> <path style="fill:#FF4B55;" d="M346.388,300.138H313.96l180.716,117.305c5.057-3.321,9.277-7.807,12.287-13.075L346.388,300.138z"></path> <path style="fill:#FF4B55;" d="M4.049,109.475l157.73,102.387h32.428L15.475,95.842C10.676,99.414,6.749,104.084,4.049,109.475z"></path> <path style="fill:#FF4B55;" d="M332.566,211.862l170.035-110.375c-4.199-4.831-9.578-8.607-15.699-10.86L300.138,211.862H332.566z"></path> </g> </g></svg>
+                <svg class="col-3 col-lg-4 click" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#FFB636" d="M1.793 161.987V348.389c169.54 52.36 339.079-52.36 508.619 0V161.987c-169.54-52.36-339.079 52.359-508.619 0z"></path><path fill="#E8E8E8" d="M171.242 289.342h-36.121v-41.325h30.361a5.76 5.76 0 0 1 5.76 5.76v35.565z"></path><path fill="#E2A042" d="M172.313 220.667h-31.481c.948-2.526 1.518-5.688 1.518-9.131c0-8.248-3.237-14.934-7.229-14.934s-7.229 6.686-7.229 14.934c0 3.443.57 6.605 1.518 9.131H97.959c-2.445 0-4.177 2.389-3.416 4.713l3.651 11.157a3.595 3.595 0 0 0 3.398 2.477l67.015.334a3.592 3.592 0 0 0 3.44-2.496l3.688-11.491c.745-2.321-.985-4.694-3.422-4.694z"></path><path fill="#E8E8E8" d="M87.304 281.017a9.304 9.304 0 1 0-18.608 0c0 3.705 2.171 6.894 5.304 8.391v31.509c0 .787.638 1.425 1.425 1.425h5.15c.787 0 1.425-.638 1.425-1.425v-31.509c3.134-1.497 5.304-4.686 5.304-8.391z"></path><path fill="#E8E8E8" d="M198.971 281.017a9.304 9.304 0 1 0-18.608 0c0 3.705 2.17 6.894 5.304 8.391v31.509c0 .787.638 1.425 1.425 1.425h5.15c.787 0 1.425-.638 1.425-1.425v-31.509c3.133-1.497 5.304-4.686 5.304-8.391z"></path><path fill="#FF473E" d="M510.412 94.03V161.987c-169.54-52.36-339.079 52.36-508.619 0V104.447c0-11.042 10.303-19.16 21.051-16.631c158.611 37.323 317.223-51.454 475.834-9.093c6.924 1.849 11.734 8.14 11.734 15.307zM1.793 348.39V416.346c0 7.167 4.81 13.458 11.734 15.307c159.129 42.499 318.258-46.998 477.387-8.724c9.944 2.392 19.499-5.177 19.499-15.405V348.388c-169.541-52.358-339.08 52.362-508.62.002zm133.328-59.048v-41.325h-30.362A5.758 5.758 0 0 0 99 253.776v50.506c0 9.975 8.086 18.06 18.061 18.06s18.06-8.086 18.06-18.06c0 9.975 8.086 18.06 18.061 18.06s18.06-8.086 18.06-18.06v-14.94h-36.121zm6.559-67.825c-4.372.174-8.745.353-13.117.528v18.481c4.372-.153 8.745-.312 13.117-.464v-18.545zm-35.013 19.599a940.96 940.96 0 0 0 13.117-.303v-18.44c-4.372.154-8.745.289-13.117.38v18.363zm56.909-20.308c-4.372.092-8.745.227-13.117.381v18.586c4.372-.132 8.745-.234 13.117-.304v-18.663z"></path><path fill="#E2A042" d="M127.793 289.342h7.328v14.94c0 5.949-2.89 11.211-7.328 14.501v-29.441zm-21.465 29.441v-29.441H99v14.94c0 5.949 2.89 11.21 7.328 14.501zm14.397-29.441h-7.328v32.627a18.128 18.128 0 0 0 7.328 0v-32.627z"></path><path fill="#575A5B" d="M147.459 289.342c0 6.814-5.524 12.338-12.338 12.338s-12.338-5.524-12.338-12.338c0-6.814 5.524-12.338 12.338-12.338s12.338 5.524 12.338 12.338zm-60.155 35.089v-3.086a4.65 4.65 0 0 0-4.649-4.649h-9.31a4.65 4.65 0 0 0-4.649 4.649v3.086a4.65 4.65 0 0 0 4.649 4.649h9.31a4.648 4.648 0 0 0 4.649-4.649zm111.667 0v-3.086a4.65 4.65 0 0 0-4.649-4.649h-9.31a4.65 4.65 0 0 0-4.649 4.649v3.086a4.65 4.65 0 0 0 4.649 4.649h9.31a4.65 4.65 0 0 0 4.649-4.649z"></path></g></svg>
             </div>
-            <nav class="col-11">
-                <div class="row text-primary text-decoration-underline">
-                    <div class="d-flex justify-content-center align-items-center nav col-2"><a href="#aboutme" class="click">About me</a></div>
-                    <div class="d-flex justify-content-center align-items-center nav col-2"><a href="#studies" class="click">Studies</a></div>
-                    <div class="d-flex justify-content-center align-items-center nav col-2"><a class="click">Work life</a></div>
-                    <div class="d-flex justify-content-center align-items-center nav col-2"><a class="click">My projects</a></div>
-                    <div class="d-flex justify-content-center align-items-center nav col-2"><a class="click">Contact me</a></div>
-                </div>
-            </nav>
-        </header>
+            <div class="botonMenu d-flex d-lg-none justify-content-center align-items-center col-2 click">
+                <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+            </div>
+        </nav>
+    </header>
+</div>
+<div class="row">
+    <div class="col-12 jumbotron">
     </div>
-    <div class="row">
-        <div class="col-12 jumbotron"></div>
+</div>
+<div id="aboutme" class="row p-5">
+    <div class="col-12 col-lg-6">
+        <h1>About me</h1>
+        <img class="foto" alt="foto" src="img/foto.jpg">
     </div>
-    <div id="aboutme" class="row p-5">
-        <div class="col-6">
-            <h1>About me</h1>
-            <img alt="foto" src="img/foto.jpg">
-        </div>
-        <div class="col-6">
-            <p>
-                My name is Francesc and I was borned in Palma in 1993.
-                In late 2022 I started to learn programming. Since then it has become one of my passions.<br>                   
-                
-                I started learning basic lessons in C#, and since then I have been learning other languages such as Java,
-                Python, PHP and Javascript.<br>
+    <div class="col-12 col-lg-6">
+        <p>
+            My name is Francesc, and I was born in Palma in 1993.
+            In late 2022 I started learning programming. Since then, it has become one of my passions.<br>
+            
+            I started learning basic lessons in C#, and later I explored other languages such as Java,
+            Python, PHP and Javascript.<br>
 
-                In 2023, I started my High Level Vocational Studies on Web Applications Development, with my objetive on become a developer.
-               
-                Nowadays, I am on my second year and I will start my internship soon.<br><br>
-            </p>
-            <h1><b>My hobbies</b></h1><br><br>
-            <p>My main hobbies are computer science, history and videogames.</p><br><br>        
-            <h1><b>Personal skills</b></h1><br><br>
-            <p>I am an open-minded person, who love to work as a team to get common objectives. I love to learn new things
-                and being able to be better solving problems day by day.<br>
-                
-                Futhermore, I am someone who is able to help people to understand themselves, and make them able to work for common objectives.<br>
-            </p>
-        </div>
+            In 2023, I started my High Level Vocational Studies on Web Applications Development, with the goal of becoming a developer.
+           
+            Currently, I am on my second year and I will start my internship soon.<br>
+        </p>
+        <h1><b>My hobbies</b></h1><br>
+        <p>My main hobbies are computer science, history, and video games.</p><br>
+        <h1><b>Personal skills</b></h1><br>
+        <p>I am an open-minded person, who loves working as part of a team to get common objectives. I love to learn new things
+            and continously improving my problem-solving skill.<br>
+            
+            Furthermore, I am someone who is able to help people to understand themselves, and empower them to work towards shared goals.<br>
+        </p>
     </div>
-    <div id="studies" class="row">
-        <div class="col-6">
-            <h1>Studies</h1>
-        </div>
+</div>
+<div id="studies" class="p-5 row">
+    <div class="col-lg-6 col-sm-12 border-left">
+        <h1>Education</h1><br>
+        <p>-<b>High School Diploma (Bachillerato) in Social Sciences</b> - Sant Josep Obrer, Spain (2011).</p><br>
+        <p>-<b>High Level Vocational Studies in Web Application Development</b> - CIFP Francesc de Borja Moll, Spain (Ongoing) - Last term average grande : 9.2.</p><br><hr>
+        <h1>Languages</h1><br>
+        <p>-<b>Spanish</b>: native.</p>
+        <p>-<b>Catalan</b>: native.</p>
+        <p>-<b>English</b>: B2.2 level - EOI Palma(Ongoing).</p>
+        <hr class="d-lg-none">
+    </div>
+    <div class="col-lg-6 col-sm-12 aux">
+        <h1>Additional Training</h1><br>
+        <p>-<b>Introduction to python programming: Learn to program in Python</b> - Pontifica Universidad de Chile (Online, 120 hours).</p><br>
+        <p>-<b>Analyse and programming with Java</b> - Academia UATAE (Online, 140 hours).</p><br>
+        <hr>
+        <h1>Soft skills</h1><br>
+        <p><b>-Assertive communication</b></p>
+        <p><b>-Thirst for knowledge</b></p>
+        <p><b>-Teamwork</b></p>
+        <p><b>-Problem-solving</b></p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
