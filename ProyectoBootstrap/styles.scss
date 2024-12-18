@@ -1,22 +1,46 @@
+$color_header: #aaffaa;
 $morado_principal: #aaaaff;
 $gris_principal: #DADADA;
 $pad:3px;
+@keyframes cambiarColor {
+  0%{
+    background-color:red;
+  }
+  33%{
+    background-color:green;
+  }
+  66%{
+    background-color:blue;
+  }
+  100%{
+    background-color:red;
+  }
+}
+$tamañoTablero: 50vw;
+@function calcularCasilla($total, $parametro){
+    @return $total/$parametro;
+}
+.quitar{
+  display:none;
+}
+.click{
+  cursor:pointer;
+}
 .container{
   width: 100vw;
   overflow-x: hidden;
   min-height: 100vh;
-  .click{
-    cursor:pointer;
-  }
-
-  .row{
-    text-align: center;
+  
+  .filaColor{
     &:nth-child(2n+3){
       background-color: $gris_principal;
     }
     &:nth-child(2n+2){
       background-color:$morado_principal;
     }
+  }
+  .row{
+    text-align: center;
     p{
       text-align: justify;
     }
@@ -26,40 +50,99 @@ $pad:3px;
     min-height: 5vh;
     position: sticky;
     top:0;
-    background-color:$morado_principal;
+    z-index: 4;//Necesari perque els hr no se'm vessin per damunt del header
+    background-color:$color_header;
     svg{
-      min-height: 10vw;
+      min-height: 5vw;
     }
     .botonMenu{
       box-shadow: inset 0 0 0 3px grey;
     }
+  }
+  .borde{
+    border-left: 1px solid black;
   }
   .foto{
     max-width: 50%;
   }
   .jumbotron{
     width: 100%;
-    background-image: url(img/jumbotron2.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 20vh;
-    animation: cambiarColor 10s infinite;
-    border-radius: 35%;
+    animation: cambiarColor 4s infinite;
+  }
+  .menu{
+    background-color: $color_header;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
   }
 }
-
-@keyframes cambiarColor {
-  0%{
-    box-shadow: inset 0 0 10px 10px rgb(255,0,0);
+@media screen and (max-width: 992px){
+  .container{
+    .borde{
+      border:0;
+    }
   }
-  33%{
-    box-shadow: inset 0 0 10px 10px rgb(0,255,0)
-  }
-  66%{
-    box-shadow: inset 0 0 10px 10px rgb(0,0,255);
-  }
-  100%{
-    box-shadow: inset 0 0 10px 10px rgb(255,0,0)
-  }
+}
+canvas{
+  display: block;
+  margin: 0 auto;
+  background: #000;
+}
+.proyectos{
+    display:flex;
+    justify-content: space-between;
+    svg{
+      width: 5%;
+    }
+    .juegos{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .tablero{
+      
+        width: $tamañoTablero;
+        height: $tamañoTablero;
+        .filas{
+          width: 100%;
+          display: flex;
+          .casillas{
+              width: calcularCasilla($tamañoTablero,8);
+              height: calcularCasilla($tamañoTablero,8);
+              display:flex;
+              justify-content: center;
+              align-items: center;
+              svg{
+                  width: 75%;
+                  height: 75%;
+              }
+          }
+          .casilla-blanca{
+              background-color: beige;
+          }
+          .casilla-negra{
+          
+              background-color: brown;
+          }
+          .casillas.active{
+              box-shadow: inset 0 0 0 5px blue;
+          }
+      }
+      .oculto{
+          display: none;
+      }
+      
+    }
+    
+    }
+    
+}
+.relative{
+    position: relative;
+    left:-100%;
+}
+.escondido{
+    left:-100%;
 }

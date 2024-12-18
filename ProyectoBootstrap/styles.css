@@ -1,19 +1,38 @@
+@keyframes cambiarColor {
+  0% {
+    background-color: red;
+  }
+  33% {
+    background-color: green;
+  }
+  66% {
+    background-color: blue;
+  }
+  100% {
+    background-color: red;
+  }
+}
+.quitar {
+  display: none;
+}
+
+.click {
+  cursor: pointer;
+}
+
 .container {
   width: 100vw;
   overflow-x: hidden;
   min-height: 100vh;
 }
-.container .click {
-  cursor: pointer;
+.container .filaColor:nth-child(2n+3) {
+  background-color: #DADADA;
+}
+.container .filaColor:nth-child(2n+2) {
+  background-color: #aaaaff;
 }
 .container .row {
   text-align: center;
-}
-.container .row:nth-child(2n+3) {
-  background-color: #DADADA;
-}
-.container .row:nth-child(2n+2) {
-  background-color: #aaaaff;
 }
 .container .row p {
   text-align: justify;
@@ -22,39 +41,95 @@
   min-height: 5vh;
   position: sticky;
   top: 0;
-  background-color: #aaaaff;
+  z-index: 4;
+  background-color: #aaffaa;
 }
 .container .header svg {
-  min-height: 10vw;
+  min-height: 5vw;
 }
 .container .header .botonMenu {
   box-shadow: inset 0 0 0 3px grey;
+}
+.container .borde {
+  border-left: 1px solid black;
 }
 .container .foto {
   max-width: 50%;
 }
 .container .jumbotron {
   width: 100%;
-  background-image: url(img/jumbotron2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 20vh;
-  animation: cambiarColor 10s infinite;
-  border-radius: 35%;
+  animation: cambiarColor 4s infinite;
+}
+.container .menu {
+  background-color: #aaffaa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
-@keyframes cambiarColor {
-  0% {
-    box-shadow: inset 0 0 10px 10px rgb(255, 0, 0);
+@media screen and (max-width: 992px) {
+  .container .borde {
+    border: 0;
   }
-  33% {
-    box-shadow: inset 0 0 10px 10px rgb(0, 255, 0);
-  }
-  66% {
-    box-shadow: inset 0 0 10px 10px rgb(0, 0, 255);
-  }
-  100% {
-    box-shadow: inset 0 0 10px 10px rgb(255, 0, 0);
-  }
+}
+canvas {
+  display: block;
+  margin: 0 auto;
+  background: #000;
+}
+
+.proyectos {
+  display: flex;
+  justify-content: space-between;
+}
+.proyectos svg {
+  width: 5%;
+}
+.proyectos .juegos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.proyectos .juegos .tablero {
+  width: 50vw;
+  height: 50vw;
+}
+.proyectos .juegos .tablero .filas {
+  width: 100%;
+  display: flex;
+}
+.proyectos .juegos .tablero .filas .casillas {
+  width: 6.25vw;
+  height: 6.25vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.proyectos .juegos .tablero .filas .casillas svg {
+  width: 75%;
+  height: 75%;
+}
+.proyectos .juegos .tablero .filas .casilla-blanca {
+  background-color: beige;
+}
+.proyectos .juegos .tablero .filas .casilla-negra {
+  background-color: brown;
+}
+.proyectos .juegos .tablero .filas .casillas.active {
+  box-shadow: inset 0 0 0 5px blue;
+}
+.proyectos .juegos .tablero .oculto {
+  display: none;
+}
+
+.relative {
+  position: relative;
+  left: -100%;
+}
+
+.escondido {
+  left: -100%;
 }/*# sourceMappingURL=styles.css.map */
